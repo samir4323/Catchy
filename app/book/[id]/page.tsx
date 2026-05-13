@@ -179,9 +179,9 @@ export default function BookingPage() {
                 dir="ltr"
                 required 
                 onChange={(e) => { 
-                  const s = services.find(srv => s.name === e.target.value); 
-                  setSelectedService(s) 
-                }} 
+  const s = services.find((srv: any) => srv.name === e.target.value); 
+  setSelectedService(s || null);
+}}
                 className="w-full bg-[#0f172a] border border-slate-700 rounded-2xl p-4 text-white outline-none text-left focus:ring-2 focus:ring-blue-500 cursor-pointer appearance-none"
               >
                 <option value="">-- Sélectionner le service --</option>
